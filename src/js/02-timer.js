@@ -19,7 +19,7 @@ function convertMs(ms) {
 const startButton = document.querySelector("[data-start]");
 const datetimePicker = document.querySelector("#datetime-picker");
 
-flatpickr('#datetime-picker', {
+flatpickr("#datetime-picker", {
   enableTime: true,
   time_24hr: true,
   minuteIncrement: 1,
@@ -34,16 +34,16 @@ flatpickr('#datetime-picker', {
   },
 });
 
-const days = document.querySelector('[data-days]');
-const hours = document.querySelector('[data-hours]');
-const minutes = document.querySelector('[data-minutes]');
-const seconds = document.querySelector('[data-seconds]');
+const days = document.querySelector("[data-days]");
+const hours = document.querySelector("[data-hours]");
+const minutes = document.querySelector("[data-minutes]");
+const seconds = document.querySelector("[data-seconds]");
 
 function addLeadingZero(value) {
  return String(value).padStart(2, "0");
 };
 
-startButton.addEventListener('click', functionStart);
+startButton.addEventListener("click", functionStart);
   function functionStart() {
   const selectedDate = new Date(datetimePicker.value).getTime();
   const currentTime = new Date().getTime();
